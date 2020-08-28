@@ -63,6 +63,19 @@ namespace DeliveryApi.Controllers
             }
         }
 
+        public IHttpActionResult Get(string criteria)
+        {
+            try
+            {
+                List<Usuario> todos = UsuarioBLL.List(criteria);
+                return Content(HttpStatusCode.OK, todos);
+            }
+            catch (Exception ex)
+            {
+                return Content(HttpStatusCode.BadRequest, ex);
+            }
+        }
+
         public IHttpActionResult Delete(int id)
         {
             try

@@ -9,8 +9,8 @@
 
 namespace BEUDelivery
 {
-    using Newtonsoft.Json;
-    using System;
+	using Newtonsoft.Json;
+	using System;
     using System.Collections.Generic;
     
     public partial class Pedido
@@ -27,7 +27,6 @@ namespace BEUDelivery
         public Nullable<int> idUsuario { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        [JsonIgnore]
         public virtual ICollection<DetallePedido> DetallePedido { get; set; }
         [JsonIgnore]
         public virtual Usuario Usuario { get; set; }

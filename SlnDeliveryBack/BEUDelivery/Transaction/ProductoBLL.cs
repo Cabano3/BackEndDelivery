@@ -21,7 +21,7 @@ namespace BEUDelivery.Transaction
 				using (var transaction = db.Database.BeginTransaction())
 				{
 					try
-					{
+					{ 
 						db.Producto.Add(p);
 						db.SaveChanges();
 						transaction.Commit();
@@ -83,6 +83,12 @@ namespace BEUDelivery.Transaction
 		{
 			DeliveryEntities db = new DeliveryEntities();
 			return db.Producto.ToList();
+		}
+
+		public static List<Producto> List(string criterio)
+		{
+			DeliveryEntities db = new DeliveryEntities();
+			return db.Producto.Where(x => x.estado.Contains(criterio)).ToList();
 		}
 	}
 }

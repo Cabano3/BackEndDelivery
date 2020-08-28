@@ -84,5 +84,15 @@ namespace BEUDelivery.Transaction
 			DeliveryEntities db = new DeliveryEntities();
 			return db.Usuario.ToList();
 		}
+
+		
+
+		public static List<Usuario> List(string criterio)
+		{
+			DeliveryEntities db = new DeliveryEntities();
+			return db.Usuario.Where(x => x.cedula.Contains(criterio)).ToList();
+		}
+
+
 	}
 }

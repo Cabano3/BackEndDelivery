@@ -32,6 +32,8 @@ namespace DeliveryApi.Controllers
             return Json(todos);
         }
 
+        
+
         public IHttpActionResult Put(Producto p)
         {
             try
@@ -56,6 +58,19 @@ namespace DeliveryApi.Controllers
                     return NotFound();
                 }
                 return Content(HttpStatusCode.OK, result);
+            }
+            catch (Exception ex)
+            {
+                return Content(HttpStatusCode.BadRequest, ex);
+            }
+        }
+
+        public IHttpActionResult Get(string criteria)
+        {
+            try
+            {
+                List<Producto> todos = ProductoBLL.List(criteria);
+                return Content(HttpStatusCode.OK, todos);
             }
             catch (Exception ex)
             {
