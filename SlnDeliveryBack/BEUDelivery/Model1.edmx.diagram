@@ -4,11 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="1d581717b6e248f289f4d225ebffb38b" Name="Diagram1">
+      <Diagram DiagramId="db0f1dd048c74f05af0b1a58fd2e3727" Name="Diagram1">
         <EntityTypeShape EntityType="DeliveryModel.DetallePedido" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DeliveryModel.Pedido" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DeliveryModel.Producto" Width="1.5" PointX="9" PointY="2.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DeliveryModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeliveryModel.Pedido" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeliveryModel.Producto" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeliveryModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DeliveryModel.Usuario" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="DeliveryModel.FK_DetallePedido_Pedido" ManuallyRouted="false" />
         <AssociationConnector Association="DeliveryModel.FK_DetallePedido_Producto" ManuallyRouted="false" />

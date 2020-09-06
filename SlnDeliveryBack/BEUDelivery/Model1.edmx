@@ -14,7 +14,6 @@
           <Property Name="subtotal" Type="decimal" Precision="18" Scale="4" />
           <Property Name="recargaentrega" Type="decimal" Precision="18" Scale="4" />
           <Property Name="iva" Type="decimal" Precision="10" Scale="3" />
-          <Property Name="total" Type="decimal" Precision="18" Scale="4" />
           <Property Name="idPedido" Type="int" />
           <Property Name="idProducto" Type="int" />
         </EntityType>
@@ -26,6 +25,7 @@
           <Property Name="fechapedido" Type="datetime" />
           <Property Name="estadopedido" Type="varchar" MaxLength="5" />
           <Property Name="idUsuario" Type="int" />
+          <Property Name="total" Type="decimal" Precision="8" Scale="4" />
         </EntityType>
         <EntityType Name="Producto">
           <Key>
@@ -164,7 +164,6 @@
           <Property Name="subtotal" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="recargaentrega" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="iva" Type="Decimal" Precision="10" Scale="3" />
-          <Property Name="total" Type="Decimal" Precision="18" Scale="4" />
           <Property Name="idPedido" Type="Int32" />
           <Property Name="idProducto" Type="Int32" />
           <NavigationProperty Name="Pedido" Relationship="Self.FK_DetallePedido_Pedido" FromRole="DetallePedido" ToRole="Pedido" />
@@ -178,6 +177,7 @@
           <Property Name="fechapedido" Type="DateTime" Precision="3" />
           <Property Name="estadopedido" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
           <Property Name="idUsuario" Type="Int32" />
+          <Property Name="total" Type="Decimal" Precision="8" Scale="4" />
           <NavigationProperty Name="DetallePedido" Relationship="Self.FK_DetallePedido_Pedido" FromRole="Pedido" ToRole="DetallePedido" />
           <NavigationProperty Name="Usuario" Relationship="Self.FK_Pedido_Usuario" FromRole="Pedido" ToRole="Usuario" />
         </EntityType>
@@ -330,7 +330,6 @@
                 <ScalarProperty Name="subtotal" ColumnName="subtotal" />
                 <ScalarProperty Name="recargaentrega" ColumnName="recargaentrega" />
                 <ScalarProperty Name="iva" ColumnName="iva" />
-                <ScalarProperty Name="total" ColumnName="total" />
                 <ScalarProperty Name="idPedido" ColumnName="idPedido" />
                 <ScalarProperty Name="idProducto" ColumnName="idProducto" />
               </MappingFragment>
@@ -343,6 +342,7 @@
                 <ScalarProperty Name="fechapedido" ColumnName="fechapedido" />
                 <ScalarProperty Name="estadopedido" ColumnName="estadopedido" />
                 <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+                <ScalarProperty Name="total" ColumnName="total" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

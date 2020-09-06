@@ -14,7 +14,7 @@ namespace BEUDelivery.Transaction
 			return db.DetallePedido.Find(id);
 		}
 
-		public static void Create(DetallePedido d)
+		public static void Create(DetallePedido p)
 		{
 			using (DeliveryEntities db = new DeliveryEntities())
 			{
@@ -22,8 +22,8 @@ namespace BEUDelivery.Transaction
 				{
 					try
 					{
-						Config(d);
-						db.DetallePedido.Add(d);
+						p.Pedido.fechapedido = DateTime.Now;
+						db.DetallePedido.Add(p);
 						db.SaveChanges();
 						transaction.Commit();
 					}
@@ -36,13 +36,7 @@ namespace BEUDelivery.Transaction
 			}
 		}
 
-		public static void Config(DetallePedido d)
-		{
-			/*d.subtotal = d.Producto.Sum(p => (p.precio * d.cantidad));
-			d.total = d.Producto.Sum(x => (x.precio * d.iva));*/
-		}
-
-		public static void Update(DetallePedido d)
+		public static void Update(DetallePedido p)
 		{
 			using (DeliveryEntities db = new DeliveryEntities())
 			{
@@ -50,8 +44,8 @@ namespace BEUDelivery.Transaction
 				{
 					try
 					{
-						db.DetallePedido.Attach(d);
-						db.Entry(d).State = System.Data.Entity.EntityState.Modified;
+						db.DetallePedido.Attach(p);
+						db.Entry(p).State = System.Data.Entity.EntityState.Modified;
 						db.SaveChanges();
 						transaction.Commit();
 					}
@@ -72,8 +66,8 @@ namespace BEUDelivery.Transaction
 				{
 					try
 					{
-						DetallePedido d = db.DetallePedido.Find(id);
-						db.Entry(d).State = System.Data.Entity.EntityState.Deleted;
+						DetallePedido p = db.DetallePedido.Find(id);
+						db.Entry(p).State = System.Data.Entity.EntityState.Deleted;
 						db.SaveChanges();
 						transaction.Commit();
 					}
@@ -85,5 +79,12 @@ namespace BEUDelivery.Transaction
 				}
 			}
 		}
+
+		public static List<DetallePedido> List()
+		{
+			DeliveryEntities db = new DeliveryEntities();
+			return db.DetallePedido.ToList();
+		}
+
 	}
 }

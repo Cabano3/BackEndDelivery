@@ -21,8 +21,8 @@ C:\Users\crist\OneDrive\Documentos\GitHub\BackEndDelivery\SlnDeliveryBack\BEUDel
 C:\Users\crist\OneDrive\Documentos\GitHub\BackEndDelivery\SlnDeliveryBack\BEUDelivery\bin\Debug\EntityFramework.xml
 C:\Users\crist\OneDrive\Documentos\GitHub\BackEndDelivery\SlnDeliveryBack\BEUDelivery\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\crist\OneDrive\Documentos\GitHub\BackEndDelivery\SlnDeliveryBack\BEUDelivery\bin\Debug\Newtonsoft.Json.xml
-C:\Users\crist\OneDrive\Documentos\GitHub\BackEndDelivery\SlnDeliveryBack\BEUDelivery\obj\Debug\BEUDelivery.csprojAssemblyReference.cache
 C:\Users\crist\OneDrive\Documentos\GitHub\BackEndDelivery\SlnDeliveryBack\BEUDelivery\obj\Debug\BEUDelivery.csproj.CoreCompileInputs.cache
 C:\Users\crist\OneDrive\Documentos\GitHub\BackEndDelivery\SlnDeliveryBack\BEUDelivery\obj\Debug\BEUDelivery.csproj.CopyComplete
 C:\Users\crist\OneDrive\Documentos\GitHub\BackEndDelivery\SlnDeliveryBack\BEUDelivery\obj\Debug\BEUDelivery.dll
 C:\Users\crist\OneDrive\Documentos\GitHub\BackEndDelivery\SlnDeliveryBack\BEUDelivery\obj\Debug\BEUDelivery.pdb
+C:\Users\crist\OneDrive\Documentos\GitHub\BackEndDelivery\SlnDeliveryBack\BEUDelivery\obj\Debug\BEUDelivery.csprojAssemblyReference.cache

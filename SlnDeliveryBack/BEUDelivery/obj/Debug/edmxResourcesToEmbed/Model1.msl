@@ -9,7 +9,6 @@
           <ScalarProperty Name="subtotal" ColumnName="subtotal" />
           <ScalarProperty Name="recargaentrega" ColumnName="recargaentrega" />
           <ScalarProperty Name="iva" ColumnName="iva" />
-          <ScalarProperty Name="total" ColumnName="total" />
           <ScalarProperty Name="idPedido" ColumnName="idPedido" />
           <ScalarProperty Name="idProducto" ColumnName="idProducto" />
         </MappingFragment>
@@ -22,6 +21,7 @@
           <ScalarProperty Name="fechapedido" ColumnName="fechapedido" />
           <ScalarProperty Name="estadopedido" ColumnName="estadopedido" />
           <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="total" ColumnName="total" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

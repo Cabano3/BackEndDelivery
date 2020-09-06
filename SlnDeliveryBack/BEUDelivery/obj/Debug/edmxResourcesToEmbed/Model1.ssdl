@@ -9,7 +9,6 @@
     <Property Name="subtotal" Type="decimal" Precision="18" Scale="4" />
     <Property Name="recargaentrega" Type="decimal" Precision="18" Scale="4" />
     <Property Name="iva" Type="decimal" Precision="10" Scale="3" />
-    <Property Name="total" Type="decimal" Precision="18" Scale="4" />
     <Property Name="idPedido" Type="int" />
     <Property Name="idProducto" Type="int" />
   </EntityType>
@@ -21,6 +20,7 @@
     <Property Name="fechapedido" Type="datetime" />
     <Property Name="estadopedido" Type="varchar" MaxLength="5" />
     <Property Name="idUsuario" Type="int" />
+    <Property Name="total" Type="decimal" Precision="8" Scale="4" />
   </EntityType>
   <EntityType Name="Producto">
     <Key>

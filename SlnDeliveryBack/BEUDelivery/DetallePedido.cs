@@ -20,10 +20,9 @@ namespace BEUDelivery
         public Nullable<decimal> subtotal { get; set; }
         public Nullable<decimal> recargaentrega { get; set; }
         public Nullable<decimal> iva { get; set; }
-        public Nullable<decimal> total { get; set; }
         public Nullable<int> idPedido { get; set; }
         public Nullable<int> idProducto { get; set; }
-    
+
         [JsonIgnore]
         public virtual Pedido Pedido { get; set; }
         [JsonIgnore]

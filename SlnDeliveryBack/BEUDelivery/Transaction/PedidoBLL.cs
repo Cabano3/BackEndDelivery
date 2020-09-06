@@ -22,7 +22,7 @@ namespace BEUDelivery.Transaction
 				{
 					try
 					{
-						p.fechapedido = DateTime.Now;
+						Config(p);
 						db.Pedido.Add(p);
 						db.SaveChanges();
 						transaction.Commit();
@@ -34,6 +34,12 @@ namespace BEUDelivery.Transaction
 					}
 				}
 			}
+		}
+
+		public static void Config(Pedido p)
+		{
+			p.fechapedido = DateTime.Now;
+			//p.total = p.DetallePedido.Sum(x => x.subtotal);
 		}
 
 		public static void Update(Pedido p)
