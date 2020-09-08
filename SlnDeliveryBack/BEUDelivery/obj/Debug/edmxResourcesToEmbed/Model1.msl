@@ -89,5 +89,21 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="DeliveryModel.Store.sp_renamediagram" />
     <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="DeliveryModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="rptProductosVendidos" FunctionName="DeliveryModel.Store.rptProductosVendidos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DeliveryModel.rptProductosVendidos_Result">
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Producto" ColumnName="Producto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="rptNumeroPedidos" FunctionName="DeliveryModel.Store.rptNumeroPedidos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DeliveryModel.rptNumeroPedidos_Result">
+          <ScalarProperty Name="Pedidos" ColumnName="Pedidos" />
+          <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

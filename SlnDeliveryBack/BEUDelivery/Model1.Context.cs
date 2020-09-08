@@ -135,5 +135,15 @@ namespace BEUDelivery
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
         }
+    
+        public virtual ObjectResult<rptProductosVendidos_Result> rptProductosVendidos()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<rptProductosVendidos_Result>("rptProductosVendidos");
+        }
+    
+        public virtual ObjectResult<rptNumeroPedidos_Result> rptNumeroPedidos()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<rptNumeroPedidos_Result>("rptNumeroPedidos");
+        }
     }
 }
