@@ -14,26 +14,16 @@ namespace DeliveryApi.Controllers
     [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
     public class ReportesController : ApiController
     {
-        public IHttpActionResult Get(int i)
+        public IHttpActionResult Get()
         {
-            try
-            {
-                if (i == 1)
-                {
-                    List<rptProductosVendidos_Result> todos = ReportesBLL.GetProductosVendidos();
-                    return Content(HttpStatusCode.OK, todos);
-                }
-                else 
-                {
-                    List<rptNumeroPedidos_Result> todos = ReportesBLL.GetPedidosCliente();
-                    return Content(HttpStatusCode.OK, todos);
-                }
-            }
-            catch (Exception ex)
-            {
-                return Content(HttpStatusCode.BadRequest, ex);
-            }
-                      
+            List<rptProductosVendidos_Result> todos = ReportesBLL.GetProductosVendidos();
+            return Json(todos);                      
         }
+
+        /*public IHttpActionResult GetCantidad()
+        {
+            List<rptNumeroPedidos_Result> ventas = ReportesBLL.GetPedidosCliente();
+            return Json(ventas);
+        }*/
     }
 }
