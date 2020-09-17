@@ -63,7 +63,7 @@ namespace DeliveryApi.Controllers
             }
         }
 
-        public IHttpActionResult Get(string criteria)
+        /*public IHttpActionResult Get(string criteria)
         {
             try
             {
@@ -74,7 +74,7 @@ namespace DeliveryApi.Controllers
             {
                 return Content(HttpStatusCode.BadRequest, ex);
             }
-        }
+        }*/
 
         public IHttpActionResult Delete(int id)
         {

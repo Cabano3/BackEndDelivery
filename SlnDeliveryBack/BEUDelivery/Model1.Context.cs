@@ -33,6 +33,26 @@ namespace BEUDelivery
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
     
+        public virtual ObjectResult<rptAgrupadosPedidosClientesMes_Result> rptAgrupadosPedidosClientesMes()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<rptAgrupadosPedidosClientesMes_Result>("rptAgrupadosPedidosClientesMes");
+        }
+    
+        public virtual ObjectResult<rptNumeroPedidos_Result> rptNumeroPedidos()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<rptNumeroPedidos_Result>("rptNumeroPedidos");
+        }
+    
+        public virtual ObjectResult<rptProductosVendidos_Result> rptProductosVendidos()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<rptProductosVendidos_Result>("rptProductosVendidos");
+        }
+    
+        public virtual ObjectResult<rptProductosVendidosMes_Result> rptProductosVendidosMes()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<rptProductosVendidosMes_Result>("rptProductosVendidosMes");
+        }
+    
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {
             var diagramnameParameter = diagramname != null ?
@@ -134,16 +154,6 @@ namespace BEUDelivery
         public virtual int sp_upgraddiagrams()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
-        }
-    
-        public virtual ObjectResult<rptProductosVendidos_Result> rptProductosVendidos()
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<rptProductosVendidos_Result>("rptProductosVendidos");
-        }
-    
-        public virtual ObjectResult<rptNumeroPedidos_Result> rptNumeroPedidos()
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<rptNumeroPedidos_Result>("rptNumeroPedidos");
         }
     }
 }

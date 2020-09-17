@@ -87,11 +87,11 @@ namespace BEUDelivery.Transaction
 
 		
 
-		public static List<Usuario> List(string criterio)
+		/*public static List<Usuario> List(int criterio)
 		{
 			DeliveryEntities db = new DeliveryEntities();
-			return db.Usuario.Where(x => x.cedula.Contains(criterio)).ToList();
-		}
+			return db.Usuario.Where(x => x.idUsuario == criterio);
+		}*/
 
 
 	}

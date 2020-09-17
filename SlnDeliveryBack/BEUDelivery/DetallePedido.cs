@@ -23,9 +23,9 @@ namespace BEUDelivery
         public Nullable<int> idPedido { get; set; }
         public Nullable<int> idProducto { get; set; }
     
-        [JsonIgnore]
+        
         public virtual Pedido Pedido { get; set; }
-        [JsonIgnore]
+        
         public virtual Producto Producto { get; set; }
     }
 }
