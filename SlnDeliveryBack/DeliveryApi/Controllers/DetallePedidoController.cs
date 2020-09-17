@@ -13,6 +13,7 @@ namespace DeliveryApi.Controllers
     [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
     public class DetallePedidoController : ApiController
     {
+    
         public IHttpActionResult Post(DetallePedido detalle)
         {
             try

@@ -2,17 +2,18 @@
 using BEUDelivery.Transaction;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Net.Http;
+
 using System.Web.Http;
 using System.Web.Http.Cors;
+
 
 namespace DeliveryApi.Controllers
 {
     [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
     public class ProductosController : ApiController
     {
+       
         public IHttpActionResult Post(Producto p)
         {
             try
@@ -25,14 +26,14 @@ namespace DeliveryApi.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
+      
         public IHttpActionResult Get()
         {
             List<Producto> todos = ProductoBLL.List();
             return Json(todos);
         }
 
-        
+
 
         public IHttpActionResult Put(Producto p)
         {
@@ -47,7 +48,7 @@ namespace DeliveryApi.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
+       
         public IHttpActionResult Get(int id)
         {
             try
@@ -64,7 +65,7 @@ namespace DeliveryApi.Controllers
                 return Content(HttpStatusCode.BadRequest, ex);
             }
         }
-
+      
         public IHttpActionResult Get(string criteria)
         {
             try
@@ -77,6 +78,7 @@ namespace DeliveryApi.Controllers
                 return Content(HttpStatusCode.BadRequest, ex);
             }
         }
+     
 
         public IHttpActionResult Delete(int id)
         {

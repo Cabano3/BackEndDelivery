@@ -87,11 +87,28 @@ namespace BEUDelivery.Transaction
 
 		
 
-		/*public static List<Usuario> List(int criterio)
+		public static List<Usuario> List(string criterio)
 		{
 			DeliveryEntities db = new DeliveryEntities();
-			return db.Usuario.Where(x => x.idUsuario == criterio);
-		}*/
+			return db.Usuario.Where(x => x.cedula.Contains(criterio)).ToList();
+		}
+
+		public static Usuario Validate(Usuario usuario)
+		{
+			DeliveryEntities db = new DeliveryEntities();
+			return db.Usuario.FirstOrDefault(x => x.usuariosesion == usuario.usuariosesion
+				&& x.contrasena == usuario.contrasena);
+
+			/*            foreach (var item in db.Usuarios.ToList())
+						{
+							if (item.correo == persona.correo && item.password == persona.password)
+							{
+								return item;
+							}
+						}
+						return null;*/
+
+		}
 
 
 	}

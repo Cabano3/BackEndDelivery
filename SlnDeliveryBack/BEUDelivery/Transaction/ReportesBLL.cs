@@ -42,7 +42,7 @@ namespace BEUDelivery.Transaction
 					cantidad = 0;
 					foreach (var j in n)
 					{
-						if(j.MES == i && j.Producto.Equals(item.nombre))
+						if (j.MES == i && j.Producto.Equals(item.nombre))
 						{
 							cantidad = j.Cantidad;
 						}

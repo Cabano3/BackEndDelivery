@@ -27,7 +27,7 @@ namespace DeliveryApi.Controllers
             {
                 return BadRequest();
             }
-                                  
+
         }
         [HttpGet]
         [Route("PedidosClientes")]
@@ -49,7 +49,7 @@ namespace DeliveryApi.Controllers
             {
                 return BadRequest();
             }
-            
+
         }
         [HttpGet]
         [Route("ProductosVendidosMes")]

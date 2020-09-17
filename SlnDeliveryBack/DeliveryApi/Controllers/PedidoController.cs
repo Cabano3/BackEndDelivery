@@ -13,6 +13,7 @@ namespace DeliveryApi.Controllers
     [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
     public class PedidoController : ApiController
     {
+    
         public IHttpActionResult Post(Pedido pedido)
         {
             try
@@ -25,6 +26,7 @@ namespace DeliveryApi.Controllers
                 return BadRequest(ex.Message);
             }
         }
+      
 
         public IHttpActionResult Get()
         {
@@ -38,7 +40,7 @@ namespace DeliveryApi.Controllers
                 return Content(HttpStatusCode.BadRequest, ex);
             }
         }
-
+       
         public IHttpActionResult Put(Pedido pedido)
         {
             try
@@ -70,6 +72,7 @@ namespace DeliveryApi.Controllers
             }
         }
 
+      
         public IHttpActionResult Delete(int id)
         {
             try

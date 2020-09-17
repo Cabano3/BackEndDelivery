@@ -12,7 +12,7 @@ namespace BEUDelivery
     using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
-    
+
     public partial class DetallePedido
     {
         public int idDetPedido { get; set; }
@@ -22,10 +22,10 @@ namespace BEUDelivery
         public Nullable<decimal> iva { get; set; }
         public Nullable<int> idPedido { get; set; }
         public Nullable<int> idProducto { get; set; }
-    
-        
+
+        [JsonIgnore]
         public virtual Pedido Pedido { get; set; }
-        
+        [JsonIgnore]
         public virtual Producto Producto { get; set; }
     }
 }

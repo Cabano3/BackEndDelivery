@@ -13,6 +13,7 @@ namespace DeliveryApi.Controllers
     [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
     public class UsuariosController : ApiController
     {
+        
         public IHttpActionResult Post(Usuario usuario)
         {
             try
@@ -25,12 +26,13 @@ namespace DeliveryApi.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
+        
         public IHttpActionResult Get()
         {
             List<Usuario> todos = UsuarioBLL.List();
             return Json(todos);
         }
+       
 
         public IHttpActionResult Put(Usuario alumno)
         {
@@ -45,7 +47,7 @@ namespace DeliveryApi.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
+       
         public IHttpActionResult Get(int id)
         {
             try
@@ -62,8 +64,8 @@ namespace DeliveryApi.Controllers
                 return Content(HttpStatusCode.BadRequest, ex);
             }
         }
-
-        /*public IHttpActionResult Get(string criteria)
+       
+        public IHttpActionResult Get(string criteria)
         {
             try
             {
@@ -74,8 +76,8 @@ namespace DeliveryApi.Controllers
             {
                 return Content(HttpStatusCode.BadRequest, ex);
             }
-        }*/
-
+        }
+       
         public IHttpActionResult Delete(int id)
         {
             try
